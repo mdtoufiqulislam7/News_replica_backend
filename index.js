@@ -27,7 +27,8 @@ app.use(cors({
       credentials: true  
 }))
 
-
+const userroute = require('./routes/User.route')
+app.use('/api',userroute)
 
 const server = async() => {
     db()
